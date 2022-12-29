@@ -1,3 +1,4 @@
+# Здесь написана функция для получения многочлена
 def get_polynomial(k):
     import random
     a = random.randint(0, 100)
