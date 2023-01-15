@@ -10,8 +10,10 @@ list = []
 for i in range(10):
     list.append(randint(-10, 10))
 print(list)
-result = 0
-for k in range(1, len(list)):
-    if (k % 2 != 0):
-        result += list[k]
-print(f'Сумма элементов на нечетных позициях: {result}')
+# result = 0
+# for k in range(1, len(list)):
+#     if (k % 2 != 0):
+#         result += list[k]
+
+print(sum(list[1::2]))
+# print(f'Сумма элементов на нечетных позициях: {result}')
