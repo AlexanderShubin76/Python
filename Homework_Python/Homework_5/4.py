@@ -1,4 +1,4 @@
-4. Реализуйте RLE алгоритм: реализуйте модуль сжатия и восстановления данных.
+# 4. Реализуйте RLE алгоритм: реализуйте модуль сжатия и восстановления данных.
 with open('file_1.txt', 'w') as data:
     data.write('AAAAAAAAAAAAAAAAAABBBFFFFFGGEEEEEEEEEEEEEEEEEEDGDSS')
 with open('file_1.txt', 'r') as data:
