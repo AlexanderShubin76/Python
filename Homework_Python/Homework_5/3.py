@@ -43,6 +43,7 @@ def checking_win(massive, name):
         (massive[0][0] == '0' and massive[1][0] == '0' and massive[2][0] == '0') or
         (massive[0][1] == '0' and massive[1][1] == '0' and massive[2][1] == '0') or
         (massive[0][2] == '0' and massive[1][2] == '0' and massive[2][2] == '0') or
+        (massive[0][2] == '0' and massive[1][1] == '0' and massive[2][0] == '0') or
         (massive[0][0] == '0' and massive[1][1] == '0' and massive[2][2] == '0') or
         (massive[0][0] == 'X' and massive[0][1] == 'X' and massive[0][2] == 'X') or
         (massive[1][0] == 'X' and massive[1][1] == 'X' and massive[1][2] == 'X') or
@@ -50,6 +51,7 @@ def checking_win(massive, name):
         (massive[0][0] == 'X' and massive[1][0] == 'X' and massive[2][0] == 'X') or
         (massive[0][1] == 'X' and massive[1][1] == 'X' and massive[2][1] == 'X') or
         (massive[0][2] == 'X' and massive[1][2] == 'X' and massive[2][2] == 'X') or
+        (massive[0][2] == 'X' and massive[1][1] == 'X' and massive[2][0] == 'X') or
         (massive[0][0] == 'X' and massive[1][1] == 'X' and massive[2][2] == 'X')):
         print(f'{name}, поздравляем Вы выиграли!!!')
         return 100

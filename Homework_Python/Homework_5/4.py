@@ -1,6 +1,6 @@
 # 4. Реализуйте RLE алгоритм: реализуйте модуль сжатия и восстановления данных.
 with open('file_1.txt', 'w') as data:
-    data.write('AAAAAAAAAAAAAAAAAABBBFFFFFFFFFFFFFFFFFFFFFGGEEEEEEEEEEEEEEEEEEDGDS')
+    data.write('AAAAAAAAAAAAAAAAAABBBFFFFFFFFFFgggggggggggggFFFFFFRRRRRRRRRRRRRRRRRFFFFFGGEEEEEEEEEjyfcfEEEEjjjjjjjEEEtttttttEEDGDS')
 with open('file_1.txt', 'r') as data:
     text = data.read()
 print(text)
