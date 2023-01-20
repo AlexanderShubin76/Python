@@ -26,20 +26,19 @@ with open('rle_file.txt', 'w') as data_1:
 with open('rle_file.txt', 'r') as data_2:
     compressed_text = data_2.read()
 
-def recover_file(rle_str):
+def recover_file(text):
     new_string = ''
-    y = len(rle_str)
-    x = 1
-    while( 0<x<y):
-        if rle_str[x].isalpha():
-            new_string += (int(rle_str[:x]) * rle_str[x])
-            rle_str = rle_str[x+1:]
-            y -= x+1
-            x = 1
+    number = ''
+    for i in text:
+        if i.isdigit():
+            number+= i
         else:
-            x+=1
+            new_string += int(number)*i
+            number = ''
+            
     return new_string
 yx = recover_file(compressed_text)
 print(yx)
 with open('recover_file.txt', 'w') as data_3:
     data_3.write(yx)
+        
