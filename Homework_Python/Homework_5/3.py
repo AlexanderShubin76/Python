@@ -67,6 +67,3 @@ while count < 9:
     k = game('Игрок №2')
     a = checking_win(massive, 'Игрок №2')
     count+=k+a
-    if count > 9:
-        break
-
