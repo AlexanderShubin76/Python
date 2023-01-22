@@ -6,21 +6,6 @@
 # список: ["123", "234", 123, "567"], ищем: "123", ответ: -1
 # список: [], ищем: "123", ответ: -1
 
-# lst = ["qwe", "asd", "zxc", "qwe", "ertqwe"]
-# desired = 'qwe'
-
-# def second_in(lst, desired):
-#     count = 0
-#     for i, elem in enumerate(lst):
-#         if elem == desired:
-#             count += 1
-#             if count == 2:
-#                 break
-#     if count > 0:
-#         return i
-#     else:
-#         return -1
-
 list = ["йцу", "фыв", "ячс", "цук", "йцукен", "йцу"]
 search_string = "йцу"
 count = 0
