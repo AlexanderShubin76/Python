@@ -6,10 +6,5 @@ def init(a, b):
     x = a
     y = b
 
-init(11, 22)
-
-print(x)
-print(y)
-
-def sum():
-    return x +y
+def do_it():
+    return x + y
