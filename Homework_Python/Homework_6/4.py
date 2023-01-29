@@ -16,4 +16,7 @@ numbers_codes = list(set([x[0:2] for x in tel_numbers]))
 d= {}
 for x in numbers_codes:
     d[x] = list(filter(lambda y: y[0:2] == x, tel_numbers))
+# for i,s in d.items():
+#     print(i, end = ': ')
+#     print(*s)
 print(*sorted(d.items()))
