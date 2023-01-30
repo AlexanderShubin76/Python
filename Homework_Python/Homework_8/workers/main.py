@@ -2,4 +2,4 @@
 # Здесь проверяем работу программы.
 import controller as con
 
-# con.operations_with_workers()
+con.operations_with_workers()
