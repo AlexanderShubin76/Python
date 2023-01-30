@@ -65,9 +65,10 @@ def export_csv_format(file): # Экспортируем данные из тел
 
 def export_json_format(file): # Экспортируем данные о сотрудниках в файл формата .json
     with open(file, "w") as write_file:
-        for i in workers.items():
-            write_file.write('id_' + str(i) + '\n')
-            
+        for i in workers:
+            # write_file.write('id_' + str(i) + '\n')
+            json.dump(workers[i], write_file)
+            print()
 print(workers)
 export_json_format('workers.json')
 
