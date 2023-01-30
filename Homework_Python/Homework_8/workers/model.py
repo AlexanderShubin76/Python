@@ -88,6 +88,6 @@ def export_csv_format(file): # Экспортируем данные из сло
 def export_json_format(file): # Экспортируем данные о сотрудниках в файл формата .json
     with open(file, 'w') as f:
         for d in workers.items():
-            json.dump(workers, f)
+            json.dump(d, f)
             f.write('\n')
         print('Экспорт данных успешно произведен!')
