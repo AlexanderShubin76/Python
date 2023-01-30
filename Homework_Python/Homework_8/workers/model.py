@@ -4,24 +4,32 @@
 # 2-я группа методов необходима для экспорта данных о сотрудниках в форматы .csv или .json.
 # Данные о сотрудниках хранятся в файле "workers.p". Данные о сотрудниках включает следующие поля:
 # id, last_name, first_name, post, tel_number, salary.
+
 import pickle
 import json
 
-workers = {
-    '1': {'last_name': 'Иванов', 'first_name': 'Иван', 'post': 'Инженер-химик', \
-        'tel_number': '878', 'salary': 95000},
-    '2': {'last_name': 'Петров', 'first_name': 'Сергей', 'post': 'Электрик', \
-        'tel_number': '578', 'salary': 60000},
-    '3': {'last_name': 'Васильев', 'first_name': 'Александр', 'post': 'Водитель', \
-        'tel_number': '222', 'salary': 62000},
-    '4': {'last_name': 'Иванов', 'first_name': 'Иван', 'post': 'Инженер', \
-        'tel_number': '878', 'salary': 95000},
-    '5': {'last_name': 'Иванов', 'first_name': 'Иван', 'post': 'Инженер', \
-        'tel_number': '878', 'salary': 95000},
-}
+# workers = {
+#     '1': {'last_name': 'Иванов', 'first_name': 'Иван', 'post': 'Инженер-химик', \
+#         'tel_number': '878', 'salary': 95000},
+#     '2': {'last_name': 'Петров', 'first_name': 'Сергей', 'post': 'Электрик', \
+#         'tel_number': '578', 'salary': 60000},
+#     '3': {'last_name': 'Васильев', 'first_name': 'Александр', 'post': 'Водитель', \
+#         'tel_number': '222', 'salary': 62000},
+#     '4': {'last_name': 'Сидорова', 'first_name': 'Алена', 'post': 'Бухгалтер', \
+#         'tel_number': '423', 'salary': 75000},
+#     '5': {'last_name': 'Куликова', 'first_name': 'Светлана', 'post': 'Менеджер по продажам', \
+#         'tel_number': '312', 'salary': 80000},
+# }
 # Извлекаем наш измененный при предыдущих запусках программы словарь из файла с расширением .pickle
-pickle.dump(workers, open("workers.p","wb" ))
+# pickle.dump(workers, open("workers.p","wb" ))
 workers = pickle.load(open( "workers.p", "rb" ) ) 
+
+# метод поиска сотрудника по id
+def search_worker(id):
+    if id in workers.keys():
+        print(f'По id_{id} найден следующий сотрудник: {workers[id]}')
+    else:
+        print('Сотрудников с таким id не обнаружено')
 
 # Метод добавления или изменения записи в телефонном справочнике
 def add_id(id, FIO, birth_date, work_place, tel_number_personal, tel_number_working): 
@@ -65,12 +73,17 @@ def export_csv_format(file): # Экспортируем данные из тел
 
 def export_json_format(file): # Экспортируем данные о сотрудниках в файл формата .json
     with open(file, "w") as write_file:
-        for i in workers:
-            # write_file.write('id_' + str(i) + '\n')
-            json.dump(workers[i], write_file)
-            print()
-print(workers)
+        for i in workers.items():
+            write_file.write(str(i) + '\n')
 export_json_format('workers.json')
+with open('workers.json', 'r') as filere:          
+    datar = ''
+    for line in filere:
+        datar += line[:-2]
+print(datar)
+
+datas = eval(datar)
+print(datas[1])
 
 
 
