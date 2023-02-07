@@ -1,4 +1,4 @@
-# Создал бота в тг для выполнения простейших арифметических операция
+# Создал бота в тг для выполнения простейших арифметических операций
 from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
 
