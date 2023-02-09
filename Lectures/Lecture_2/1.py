@@ -1,8 +1,10 @@
 colors = ['red', 'green', 'blue']
 data = open('file.txt', 'w')
-# data.writelines(colors) # разделителей не будет
-data.write('\nLINE 12\n')
-data.write('LINE 13\n')
+# data.writelines(colors \n) # разделителей не будет
+for line in colors:
+    data.write(line + '\n')
+# data.write('\nLINE 12\n')
+# data.write('LINE 13\n')
 data.close()
  
 # with open('file.txt', 'a') as data:
